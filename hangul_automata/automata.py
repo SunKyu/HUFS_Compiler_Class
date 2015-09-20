@@ -115,6 +115,7 @@ def run():
 
 if __name__ == "__main__":
     with open(sys.argv[1], "r") as f:
-        intext = f.readline()
+        for i in f.readlines():
+            intext+=i.rstrip('\n')
     run()
 
