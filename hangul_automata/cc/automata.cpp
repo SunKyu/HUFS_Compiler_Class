@@ -15,7 +15,7 @@
 using namespace std;
 queue <wchar_t> buf;
 const wchar_t ja[] = L"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅍㅌㅋㅎㅃㅉㄸㄲㅆ";
-const wchar_t mo[] = L"ㅏㅑㅓㅕㅗㅛㅜㅡㅣㅐㅔㅒㅖ";
+const wchar_t mo[] = L"ㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣㅐㅔㅒㅖ";
 int state;
 
 

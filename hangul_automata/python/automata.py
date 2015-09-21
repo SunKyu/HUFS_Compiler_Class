@@ -3,7 +3,7 @@ import sys
 from collections import deque
 
 ja= "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅍㅌㅋㅎㅃㅉㄸㄲㅆ"
-mo = "ㅏㅑㅓㅕㅗㅛㅜㅡㅣㅐㅔㅒㅖ"
+mo = "ㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣㅐㅔㅒㅖ"
 state = "start"
 buf = deque( [])
 intext = ""
