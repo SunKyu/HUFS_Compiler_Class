@@ -1,11 +1,18 @@
 CXX = gcc
 Target = driver.c
 
-$(Target) : link
+$(Target) : compile
 	gcc -L/usr/local/opt/flex/lib -lfl *.o
 
-link:
+compile: link
 	gcc -c *.c
+
+link: flex
+	flex ../Tools/tiger.lex
+	mv lex.yy.c lex.yy.c.old
+	cp ../Tools/lex.yy.c .
+flex:
+	brew install -y flex
 
 clean:
 	rm -rf *.o a.out

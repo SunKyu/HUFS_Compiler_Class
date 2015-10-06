@@ -225,7 +225,12 @@ int yylex(){
                                     putbuf(ch);
                                     ch = getc(yyin);
                                 }
-                                ch = getc(yyin);
+                                else if(ch =='n'){
+                                    putbuf('\\');
+                                    putbuf(ch);
+                                    ch = getc(yyin);
+                                }
+                                //ch = getc(yyin);
                                 continue;
                             }
                             putbuf(ch);
