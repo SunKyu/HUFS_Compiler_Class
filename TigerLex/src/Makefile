@@ -7,7 +7,7 @@ $(Target) : compile
 compile: link
 	gcc -c *.c
 
-link: flex
+link:
 	flex ../Tools/tiger.lex
 	mv lex.yy.c lex.yy.c.old
 	cp ../Tools/lex.yy.c .

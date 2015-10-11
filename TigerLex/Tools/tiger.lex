@@ -12,6 +12,7 @@ extern int atoi(const char*);
 letter		[A-Za-z]
 digit		[0-9]
 integer		{digit}+
+float       {digit}+"."{digit}+(e[+-]?[0-9]+)?
 ws			[\ \t]
 
 %%
@@ -19,6 +20,7 @@ ws			[\ \t]
 <INITIAL>\n		{ EM_newline(); continue; }
 <INITIAL>{ws}		{ continue; }
 <INITIAL>{integer}	{ yylval.ival = atoi(yytext); return INT; }
+<INITIAL>{float}    { yylval.sval = String(yytext); return FLOAT; }
 <INITIAL>","		{ return COMMA; }
 <INITIAL>":"		{ return COLON; }
 <INITIAL>";"		{ return SEMICOLON; }
