@@ -48,3 +48,4 @@ extern YYSTYPE yylval;
 # define VAR 298
 # define TYPE 299
 # define FLOAT 300
+# define DOTDOT 301

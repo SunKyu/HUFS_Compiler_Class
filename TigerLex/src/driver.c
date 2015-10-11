@@ -21,12 +21,12 @@ string toknames[] = {
 "MINUS", "TIMES", "DIVIDE", "EQ", "NEQ", "LT", "LE", "GT", "GE",
 "AND", "OR", "ASSIGN", "ARRAY", "IF", "THEN", "ELSE", "WHILE", "FOR",
 "TO", "DO", "LET", "IN", "END", "OF", "BREAK", "NIL", "FUNCTION",
-"VAR", "TYPE", "FLOAT"
+"VAR", "TYPE", "FLOAT", "DOTDOT"
 };
 
 
 string tokname(tok) {
-  return tok<257 || tok>300 ? "BAD_TOKEN" : toknames[tok-257];
+  return tok<257 || tok>301 ? "BAD_TOKEN" : toknames[tok-257];
 }
 
 int main(int argc, char **argv)

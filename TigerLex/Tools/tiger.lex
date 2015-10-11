@@ -12,7 +12,8 @@ extern int atoi(const char*);
 letter		[A-Za-z]
 digit		[0-9]
 integer		{digit}+
-float       {digit}+"."{digit}+(e[+-]?[0-9]+)?
+exponent    (e|E)(+|-|_){digit}+
+float       {digit}+"."{digit}+(e[+-]?{digit}+)?
 ws			[\ \t]
 
 %%
