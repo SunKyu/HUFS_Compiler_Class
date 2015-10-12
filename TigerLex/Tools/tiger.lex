@@ -12,8 +12,8 @@ extern int atoi(const char*);
 letter		[A-Za-z]
 digit		[0-9]
 integer		{digit}+
-exponent    (e|E)(+|-|_){digit}+
-float       {digit}+"."{digit}+(e[+-]?{digit}+)?
+exponent    [Ee][+-]?{integer}
+float       ({digit}+{exponent})|({digit}+"."{digit}*{exponent}?)|({digit}*"."{digit}+{exponent}?)
 ws			[\ \t]
 
 %%
@@ -31,6 +31,7 @@ ws			[\ \t]
 <INITIAL>"]"            { return RBRACK; }
 <INITIAL>"{"            { return LBRACE; }
 <INITIAL>"}"            { return RBRACE; }
+<INITIAL>".."           { return DOTDOT; }
 <INITIAL>"."            { return DOT; }
 <INITIAL>"+"            { return PLUS; }
 <INITIAL>"-"            { return MINUS; }
