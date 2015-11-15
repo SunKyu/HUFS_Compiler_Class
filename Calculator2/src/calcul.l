@@ -6,7 +6,6 @@ double	atof();
 %}
 
 %option noyywrap
-%option yylineno 
 
 letter		[a-z]
 digit		[0-9]
