@@ -72,9 +72,11 @@ factor1
 	| NUM
 
 %%
+/*
 void yyerror (char* s) {
 	printf ("***Error:%s\n", s);
 }
+*/
 int main ()
 {
 	yyparse ();

@@ -4,7 +4,7 @@ OBJECTS :=  calcul.tab.o lex.yy.o
 
 
 $(TARGET): $(OBJECTS)
-	gcc -o $@ $(OBJECTS)
+	gcc -L/usr/local/opt/bison/lib -ly -L/usr/local/opt/flex/lib -lfl -o $@ $(OBJECTS)
 
 calcul.tab.c calcul.tab.h: calcul.y
 		bison -vd $^
