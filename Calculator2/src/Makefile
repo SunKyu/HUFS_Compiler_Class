@@ -2,7 +2,6 @@
 TARGET := calcul
 OBJECTS :=  calcul.tab.o lex.yy.o
 
-
 $(TARGET): $(OBJECTS)
 	gcc -L/usr/local/opt/bison/lib -ly -L/usr/local/opt/flex/lib -lfl -o $@ $(OBJECTS)
 

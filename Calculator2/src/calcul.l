@@ -24,6 +24,7 @@ whitespace	[ \t]
 		  return IDENT;
                 }
 print           { return PRINT; }
+,               { return COMMA; }
 =               { return ASSIGN; }
 ;               { return SEMI; }
 \n              { return NL; }
